@@ -226,10 +226,16 @@ font-size: 34px;
     width: 24%;
     /* background-color: green; */
     min-height: 300px;
+    overflow: hidden;
 }
 .port-col img{
     width: 90%;
     overflow: hidden;
+    transition: 1s;
+}
+.port-col img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
 }
 .portfolio p{
     font-size: 18px;
