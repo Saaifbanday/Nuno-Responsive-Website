@@ -5,18 +5,46 @@
     font-family: "Lato", sans-serif;
 }
 .main{
-    width: 100%;
-    height: 100vh; 
     position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
 }
-.asli-video{
-    min-width: 100%;
+.video-wrap{
+    clip: rect(0, auto, auto, 0);
     position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.nd-video{
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
+    z-index: -1000;
+}
+video{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background: url(fixed.css) no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
 }
 header{
     width: 100%;
@@ -125,75 +153,80 @@ text-align: center;
     color: #fff;
     border: none;
 }
-.section3{
+
+.grid-container{
     background-color: #E9ECEF;
     text-align: center;
-    width: 100%;
-    /* height: 70vh; */
+    /* width: 100%; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    row-gap: 8px;
+    column-gap: 2px;
+    padding: 0 40px;
+  
 }
-.feature{
-    font-size: 40px;
-    padding-top: 3rem;
-    padding-bottom: 4rem;
-}
-.section3-row{
-    width: 80%;
-    margin: auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    /* background-color: yellow; */
-}
+
 .sec3-col1{
-    width: 30%;
-    /* border: 1px solid red; */
+    width: 60%;
+    border: 1px solid red;
     padding: 16px 15px;
     margin-bottom: 40px;
+   
+}
+.round{
+    border: 1px solid #1EBBA3;
+    border-radius: 50%;
+    width: 24%;
+    background-color: #1EBBA3;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    
 }
 .sec3-col1 i{
-    font-size: 40px;
-    color: #1EBBA3;
+    font-size: 38px;
+   color: white;
     padding: 10px;
+   
+   
 }
 .sec3-col1 h1{
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 400;
     padding-bottom: 10px;
 }
 .sec3-col1 p{
     font-size: 16px;
 }
-
   .line{
     width: 3rem;
     height: .2rem;
     background-color: #1EBBA3;
     margin: 0 auto 2rem;
   } 
+  .section4{
+    height: 100%;
+  }
 .section4{
-    margin: auto;
-    text-align: center;
+    background-image: url('https://nuno-tashila.netlify.app/img/fixed/apple-mobile.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
     width: 100%;
-    background-image: url(https://asianmeditour.com/assets/images/post/1518429568dim.jpg);
-    background-attachment: fixed;
-    /* opacity: 0.80; */
-    background-size: cover;
-    min-height: 80vh;
-    color: #fff;
+  
 }
-.section4 h1{
+/* .section4 h1{
    padding-top: 4%;
    font-size: 40px;
-}
-.sec3-row{
-    min-height: 70vh;
+} */
+/* .sec3-row{
+    height: 100vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
-.sec3-col h1,i{
+} */
+/* .sec3-col h1,i{
     font-size: 35px;
     padding: 10px 0;
 }
@@ -203,7 +236,7 @@ text-align: center;
 .sec3-col p{
     font-size: 20px;
     padding-top: 10px;
-}
+} */
 /* portfolio section */
 .portfolio{
     width: 100%;
@@ -214,19 +247,18 @@ text-align: center;
 padding: 4% 0px;  
 font-size: 34px;
 }
-.portfolio-row{
-    display: flex;
-    /* margin: 15px 20px; */
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 3rem;
-}
+
+.grid-container3{
+    /* width: 100%; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    justify-items: center ;
+ }
+
 .port-col{
-    width: 24%;
-    /* background-color: green; */
-    min-height: 300px;
     overflow: hidden;
+    width: 100%;
+    /* height: 100%; */
 }
 .port-col img{
     width: 90%;
@@ -239,6 +271,7 @@ font-size: 34px;
 }
 .portfolio p{
     font-size: 18px;
+    padding-top: 20px ;
 }
 .button-2{
     margin: 15px 0;
@@ -254,17 +287,20 @@ font-size: 34px;
     text-align: center;
     margin: auto;
     background-color: #E9ECEF;
+    padding-bottom: 40px;
 }
 
 .pricing-row{
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    /* column-gap: 8px; */
+    margin: 0 90px;
 }
 .pricing-col{
-    padding: 15px;
+    padding: 40px 12px;
     margin-bottom: 3%;
-    min-width: 24%;
+    min-width: 15%;
     background-color :#fff;
     border-top: 4px solid #1EBBA3;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -349,17 +385,18 @@ padding: 15px 0;
 /* new-section */
 .Our-Skills{
     width: 100%;
-    min-height: 90vh;
+    min-height: 80vh;
     margin: auto;
     text-align: center;
     background-color: #E9ECEF;
 }
 .skills-row{
     width: 100%;
-    min-height: 50vh;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;   
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    /* border: 1px solid red; */
+    align-content: center;
+    padding-bottom: 80px;
 }
 .Our-Skills h1{
     padding: 3% 0;
@@ -567,5 +604,34 @@ header img{
 }
 .asli-video{
     height: 100vh;
+}
+}
+@media screen and (max-width:1000px){
+    
+.grid-container{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-container3{
+    
+    grid-template-columns: repeat(3, 1fr);
+    
+}
+.port-col{
+    width: 100%;
+}
+.pricing-row{
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+}
+.pricing-col{
+    min-width: 100%;
+    padding: 10px 10px;
+
+}
+
+.skills-row{
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 20px;
 }
 }
