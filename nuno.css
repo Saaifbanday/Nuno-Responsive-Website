@@ -241,13 +241,33 @@ nav ul li {
 /* new section */
 
 .section4 {
-    background-color: green;
+    position: relative;
+    width: 100%;
+    min-height: 500px; /* Adjust height as needed */
+   background-color: black;
+   color: white;
+}
+.section4::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   background-image: url(https://nuno-tashila.netlify.app/img/fixed/apple.png);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.30; /* Adjust opacity as needed */
+    z-index: 1;
+
 }
 
 .section4 h1 {
     padding-top: 3%;
     font-size: 40px;
     text-align: center;
+    position: relative;
+    z-index: 3;
 }
 
 .sec3-row {
@@ -255,7 +275,11 @@ nav ul li {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: relative;
+    z-index: 3; /* Higher z-index to ensure it’s above the background image */
+   
 }
+
 
 .sec3-col {
     display: flex;
@@ -753,7 +777,10 @@ textarea {
     .pricing-row {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 10px;
-        margin: 20px;
+        margin: 30px;
+    }
+    .pricing-col{
+        margin-bottom: 40px;
     }
 
     .pricing-col {
@@ -770,7 +797,7 @@ textarea {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 16px;
         column-gap: 20px;
-        padding: 20px;
+        padding: 30px;
     }
 
     .mto-col {
