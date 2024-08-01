@@ -53,17 +53,26 @@ video {
 
 header {
     width: 100%;
-    height: 90px;
+    height: 60px;
     /* background-color: yellow; */
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.6;
+    background-color: #0c0c0ccb;
+    /* background: transparent; */
+    z-index: 40;
 }
 
 header img {
     height: 2rem;
 }
-
+nav{
+  position: relative;
+}
 nav ul {
     display: flex;
     gap: 1.5rem;
@@ -133,7 +142,8 @@ nav ul li {
 }
 
 .section2 {
-    padding: 50px 20px;
+    /* padding: 50px 20px; */
+    padding: 3% 2%;
     width: 100%;
     min-height: 40vh;
     /* box-shadow: ; */
@@ -174,22 +184,33 @@ nav ul li {
     color: #fff;
     border: none;
 }
-
+/* .mini-sep{
+    width: 4%;
+    height: 2px;
+    background-color: #1EBBA3;
+    text-align: center;
+} */
 /* new section */
-
-.grid-container {
+.section3{
     background-color: #E9ECEF;
+    padding: 3% 0;
+}
+.section3 h2{
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 30px;
+    border-bottom: 2px solid #1EBBA3;
+}
+.grid-container {
     text-align: center;
     /* width: 100%; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
-    row-gap: 8px;
+    /* row-gap: 8px; */
     column-gap: 2px;
     padding: 0 40px;
-
 }
-
 .sec3-col1 {
     width: 60%;
     /* border: 1px solid red; */
@@ -241,11 +262,12 @@ nav ul li {
 /* new section */
 
 .section4 {
+    padding: 3% 0;
     position: relative;
     width: 100%;
     min-height: 500px; /* Adjust height as needed */
-   background-color: black;
-   color: white;
+    background-color: black;
+    color: white;
 }
 .section4::before{
     content: "";
@@ -263,7 +285,6 @@ nav ul li {
 }
 
 .section4 h1 {
-    padding-top: 3%;
     font-size: 40px;
     text-align: center;
     position: relative;
@@ -307,6 +328,7 @@ i {
 
 /* portfolio section */
 .portfolio {
+    padding: 2% 0.6%;
     width: 100%;
     margin: auto;
     text-align: center;
@@ -314,7 +336,7 @@ i {
 
 .portfolio h1,
 .pricing h1 {
-    padding: 4% 0px;
+   padding-bottom: 3% ;
     font-size: 34px;
 }
 
@@ -358,18 +380,19 @@ i {
 
 /* pricing Section */
 .pricing {
+    padding: 3% 0;
     width: 100%;
     text-align: center;
     margin: auto;
     background-color: #E9ECEF;
-    padding-bottom: 40px;
+    /* padding-bottom: 40px; */
 }
 
 .pricing-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
-    /* column-gap: 8px; */
+    column-gap: 28px;
     margin: 0 90px;
 }
 
@@ -409,6 +432,7 @@ i {
 }
 
 .meet-our-team {
+    padding: 3% 0;
     width: 100%;
     min-height: 100vh;
     background-attachment: fixed;
@@ -425,7 +449,7 @@ i {
 }
 
 .meet-our-team2 h1 {
-    padding-top: 4rem;
+    /* padding-top: 4rem; */
     font-size: 34px;
     font-weight: 400;
 }
