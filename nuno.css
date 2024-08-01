@@ -753,6 +753,7 @@ textarea {
     .pricing-row {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 10px;
+        margin: 20px;
     }
 
     .pricing-col {
@@ -769,6 +770,7 @@ textarea {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 16px;
         column-gap: 20px;
+        padding: 20px;
     }
 
     .mto-col {
