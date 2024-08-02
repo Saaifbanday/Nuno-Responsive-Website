@@ -114,14 +114,14 @@ nav ul li {
 
 .main .text h1 {
     color: #fff;
-    font-size: 72px;
+    font-size: 68px;
     font-weight: 700;
     line-height: 100px;
 }
 
 .main .text h2 {
     color: #fff;
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 700;
     line-height: 100px;
 
@@ -199,7 +199,6 @@ nav ul li {
     text-align: center;
     padding-bottom: 20px;
     font-size: 30px;
-    border-bottom: 2px solid #1EBBA3;
 }
 .grid-container {
     text-align: center;
@@ -281,6 +280,7 @@ nav ul li {
     background-position: center;
     opacity: 0.30; /* Adjust opacity as needed */
     z-index: 1;
+    background-attachment: fixed;
 
 }
 
@@ -288,7 +288,7 @@ nav ul li {
     font-size: 40px;
     text-align: center;
     position: relative;
-    z-index: 3;
+    z-index: 4;
 }
 
 .sec3-row {
@@ -432,24 +432,24 @@ i {
 }
 
 .meet-our-team {
-    padding: 3% 0;
     width: 100%;
     min-height: 100vh;
     background-attachment: fixed;
-    background-image: url(https://images.unsplash.com/photo-1579294800821-694d95e86143?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url(https://nuno-tashila.netlify.app/img/fixed/office.png);
+    
 }
 
 .meet-our-team2 {
+    padding: 2% 0;
     width: 100%;
     min-height: 100vh;
     opacity: 1;
-    background-color: rgba(209, 201, 201, 0.693);
+    background-color: rgba(209, 201, 201, 0.76);
     margin: auto;
     text-align: center;
 }
 
 .meet-our-team2 h1 {
-    /* padding-top: 4rem; */
     font-size: 34px;
     font-weight: 400;
 }
@@ -500,6 +500,7 @@ i {
 
 /* new-section */
 .Our-Skills {
+    padding: 3% 0;
     width: 100%;
     min-height: 80vh;
     margin: auto;
@@ -516,8 +517,9 @@ i {
     padding-bottom: 80px;
 }
 
+
 .Our-Skills h1 {
-    padding: 3% 0;
+    padding-bottom: 2%;
     font-size: 36px;
 }
 
@@ -587,52 +589,78 @@ i {
 /* new-section */
 .Contact-Us {
     width: 100%;
-    background-color: #575C62;
-
+    position: relative;
+    background-color: #575c62;
+}
+.Contact-Us::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://nuno-tashila.netlify.app/img/footer/footer.png);
+    z-index: 1;
+    background-position: center center;
+    background-size: cover;
+    opacity: 0.20;
 }
 
 .contact-us-row {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    z-index: 4;
 }
 
 .contact-us-col1 {
     width: 40%;
     color: #fff;
     padding: 40px 40px;
+    z-index: 4;
 }
 
 .contact-us-col1 img {
     width: 30%;
     padding-bottom: 10px;
+    margin-left: -8px;
+
 }
 
 .contact-us-col1 p {
-    font-size: 16px;
-    padding-bottom: 10px;
+    font-size: 14px;
+    padding-bottom: 4px;
+    z-index: 3;
 
 }
 
-.contact-us-col1 h4 {
+.contact-us-col1 h3 {
     font-size: 20px;
     padding: 10px 0;
+    z-index: 3;
+
 }
 
 .contact-us-col1 h5 {
     line-height: 30px;
+    z-index: 3;
+
 }
 
 .contact-us-col1 i {
     font-size: 20px;
     padding: 0 4px;
     margin-top: 20px;
+    z-index: 3;
+
 }
 
 .conatct-us-col2 {
     width: 40%;
     display: flex;
     flex-direction: column;
+    z-index: 4;
+
 }
 
 .conatct-us-col2 h1 {
@@ -642,21 +670,34 @@ i {
 
 form input,
 textarea {
-    width: 80%;
+    width: 100%;
     padding: 10px 4px;
     margin: 10px 0;
-    background: transparent;
+    /* background: transparent; */
     border: 2px solid grey;
+    z-index: 4;
+    outline: none;
+    background-color: #53595F;
 }
-
+.conatct-us-col2 form input::placeholder{
+    color: white;
+    opacity: 0.40;
+}
+.conatct-us-col2 form textarea::placeholder{
+    color: white;
+    opacity: 0.40;
+}
 .none {
     width: 30%;
     margin: 15px 0;
+    opacity: 0.60;
 }
 
 .Contact-Us div {
     color: #fff;
     padding: 15px 10px;
+    z-index: 3;
+
 }
 
 /* responsiveness starrs */
