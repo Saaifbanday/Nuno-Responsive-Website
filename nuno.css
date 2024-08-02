@@ -678,6 +678,7 @@ textarea {
     z-index: 4;
     outline: none;
     background-color: #53595F;
+    color: #fff;
 }
 .conatct-us-col2 form input::placeholder{
     color: white;
