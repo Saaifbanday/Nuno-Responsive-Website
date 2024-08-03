@@ -459,6 +459,8 @@ i {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 60px;
+    justify-items: center;
+    padding-inline: 4%;
 }
 
 .mto-col {
@@ -502,7 +504,7 @@ i {
 .Our-Skills {
     padding: 3% 0;
     width: 100%;
-    min-height: 80vh;
+    min-height: 75vh;
     margin: auto;
     text-align: center;
     background-color: #E9ECEF;
@@ -514,7 +516,8 @@ i {
     grid-template-columns: repeat(4, 1fr);
     /* border: 1px solid red; */
     align-content: center;
-    padding-bottom: 80px;
+    padding: 60px 0;
+    padding-inline: 14%;
 }
 
 
