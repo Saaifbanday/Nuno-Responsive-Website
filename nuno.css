@@ -390,20 +390,23 @@ i {
 
 .pricing-row {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 30%);
     justify-items: center;
-    column-gap: 28px;
+    /* column-gap: 28px; */
     margin: 0 90px;
+    justify-content: center;
+    justify-items: center;
 }
 
 .pricing-col {
-    padding: 40px 12px;
+    padding: 11px 16px;
     margin-bottom: 3%;
-    min-width: 15%;
+    max-width: 78%;
     background-color: #fff;
     border-top: 4px solid #1EBBA3;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     transition: 0.70s;
+   
 }
 
 .pricing-col h1 {
@@ -896,7 +899,7 @@ mobile responsive starts from here
 
     .pricing-col {
         max-width: 100%;
-        padding: 8px 10px;
+        padding: 8px 40px;
         width: 100%;
 
     }
