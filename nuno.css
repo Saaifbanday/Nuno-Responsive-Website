@@ -84,26 +84,40 @@ nav ul li {
     font-size: 20px;
 }
 
-.mobile-nav-icon {
+.mobile-nav-button {
+    display: flex;
+    margin-right: 20px;
     color: #fff;
-    width: 2rem;
+    width: 1rem;
     height: 2rem;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 50px;
+    top: -10px;
     padding: 18px 8px;
+    /* background-color: yellow; */
+    /* display: none; */
 }
-
-.mobile-nav-button {
-    display: none;
-    cursor: pointer;
-    background: transparent;
-}
-
-.mobile-nav-button [name="close-outline"] {
+.close{
     display: none;
 }
-
+.open{
+    display: none;
+}
+.responsive{
+    position: absolute;
+    top: 60px;
+    width: 100vw;
+    background-color: aqua;
+    display: block;
+    padding: 10px;
+    background-color: #1EBBA3;
+    display: none;
+}
+.responsive ul li{
+    padding: 10px;
+    margin-left: 40px;
+    list-style: none;
+}
 .main .text {
     position: absolute;
     left: 50%;
@@ -724,14 +738,14 @@ textarea {
     }
 
     /* hambuger menu */
-    .mobile-nav-button {
+    .open {
         display: block;
         z-index: 999;
     }
 
-    nav {
+     nav {
         display: none;
-    }
+    } 
 
     .pricing-row,
     .sec3-row,
