@@ -11,9 +11,8 @@ open.addEventListener('click',()=>{
     else{
         responsive.classList.add('responsive')
         responsive.style.display = "block"
-        close.style.display = "block"
-
-    } 
-  
+        // close.style.display = "block"
+    }
 })
+
    

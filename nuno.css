@@ -94,6 +94,7 @@ nav ul li {
     right: 50px;
     top: -10px;
     padding: 18px 8px;
+    font-size: 14px;
     /* background-color: yellow; */
     /* display: none; */
 }
@@ -107,11 +108,12 @@ nav ul li {
     position: absolute;
     top: 60px;
     width: 100vw;
-    background-color: aqua;
     display: block;
     padding: 10px;
-    background-color: #1EBBA3;
+    /* background-color: #1ebba3; */
+    background-color: #505962;
     display: none;
+    color: #fff;
 }
 .responsive ul li{
     padding: 10px;
